@@ -1,0 +1,29 @@
+<h2>All Dragons</h2>
+<div ng-controller='DragonController as DC' ng-init='DC.getDragons()'>
+  <table>
+        <thead>
+          <tr>
+              <th data-field="name">Dragon Name</th>
+              <th data-field="color">Dragon Color</th>
+              <th data-field="element">Dragon Element</th>
+              <th data-field="moves">Dragon Moves</th>
+              <th data-field="actions">Dragon Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat='dragon in DC.dragons'>
+            <td><span ng-bind='dragon.name'></span></td>
+            <td><span ng-bind='dragon.color'></span></td>
+            <td><span ng-bind='dragon.element'></span></td>
+            <td><span ng-bind='dragon.moves'></span></td>
+            <td>
+              <a class="waves-effect waves-light btn purple" href='#/dragons/show/{{dragon.id}}'><i class="material-icons right">cloud</i>Show Dragon</a>
+              <a class="waves-effect waves-light btn cyan" href='#/dragons/edit/{{dragon.id}}'><i class="material-icons right">send</i>edit Dragon</a>
+              <button style='display:inline; margin-right:5px' class="btn waves-effect waves-dark red" type="submit" name="action" ng-click='DC.deleteDragon(dragon.id)'>Delete Dragon
+                <i class="material-icons right">send</i>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

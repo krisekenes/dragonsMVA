@@ -1,0 +1,38 @@
+<h2>Create Dragons</h2>
+<div ng-controller='DragonController as DC'>
+  <div class="row">
+    <form class="col s12" name='dragonForm'>
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="icon_prefix" type="text" class="validate" ng-model='DC.newDragon.name'>
+          <label for="icon_prefix">Dragon Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">invert_colors</i>
+          <input id="icon_telephone" type="tel" class="validate" ng-model='DC.newDragon.color'>
+          <label for="icon_telephone">Color</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">polymer</i>
+          <input id="icon_telephone" type="tel" class="validate" ng-model='DC.newDragon.element'>
+          <label for="icon_telephone">Element</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <i class="material-icons prefix">library_add</i>
+          <input id="icon_telephone" type="tel" class="validate" ng-model='DC.newDragon.moves'>
+          <label for="icon_telephone">Moves</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action" ng-click='DC.createDragon()'>Create Dragon
+          <i class="material-icons right">send</i>
+      </button>
+      </form>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <meta charset="utf-8">
+    <title>Dragons</title>
+    <script src=<?php echo base_url('assets/bower_components/jquery/dist/jquery.js');?> charset="utf-8"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src=<?php echo base_url('assets/bower_components/angular/angular.js');?> charset="utf-8"></script>
+    <script src=<?php echo base_url('assets/bower_components/angular-route/angular-route.js');?> charset="utf-8"></script>
+    <script src=<?php echo base_url('assets/bower_components/angular-messages/angular-messages.js');?> charset="utf-8"></script>
+    <script src=<?php echo base_url('assets/angular_files/app.js');?> charset="utf-8"></script>
+    <script src=<?php echo base_url('assets/angular_files/routes/angular_routes.js');?> charset="utf-8"></script>
+    <script src=<?php echo base_url('assets/angular_files/factories/dragon_factory.js');?> charset="utf-8"></script>
+    <script src=<?php echo base_url('assets/angular_files/controllers/dragon_controller.js');?> charset="utf-8"></script>
+  </head>
+  <body>
+    <nav>
+    <div class="nav-wrapper teal">
+      <a href="#/dragons" class="brand-logo">Dragons</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="#/dragons/create">Create</a></li>
+      </ul>
+    </div>
+  </nav>
+    <div ng-view=''>
+
+    </div>
+  </body>
+</html>
