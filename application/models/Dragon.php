@@ -3,7 +3,7 @@ class Dragon extends CI_Model {
 
 	public function create($dragon)
 	{
-		$query = "INSERT INTO dragons(name, color, element, moves, created_at, updated_at) VALUES (?,?,?,?, NOW(), NOW())";
+		$query = "INSERT INTO dragons(name, color, element, moves, created_at, updated_at) VALUES (?,?,?,?, GETDATE(), GETDATE())";
 		$values = array($dragon['name'],$dragon['color'],$dragon['element'],$dragon['moves']);
 
 		$this->db->query($query, $values);
@@ -20,7 +20,7 @@ class Dragon extends CI_Model {
 	}
 	public function update($dragon, $id)
 	{
-		$query = "UPDATE dragons SET name = ?, color = ?, element = ?, moves = ?, updated_at = NOW() WHERE id = ?";
+		$query = "UPDATE dragons SET name = ?, color = ?, element = ?, moves = ?, updated_at = GETDATE() WHERE id = ?";
 		$values = array($dragon['name'], $dragon['color'],$dragon['element'],$dragon['moves'], $id);
 		$this->db->query($query, $values);
 	}

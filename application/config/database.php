@@ -4,13 +4,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $active_group = 'default';
 $query_builder = TRUE;
 
+// 'hostname' => 'tcp:dragonstest.database.windows.net,1433',
+// 'username' => 'dragonstest@dragonstest',
+// 'password' => 'Thisismypassword1!',
+// 'database' => 'dragonsTest',
+// 'dbdriver' => 'sqlsrv',
+
+
+
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => 'root',
+	'hostname' => 'tcp:dragons.database.windows.net,1433',
+	'username' => 'kris',
+	'password' => 'Password1!',
 	'database' => 'dragons',
-	'dbdriver' => 'mysqli',
+	'dbdriver' => 'sqlsrv',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => TRUE,
